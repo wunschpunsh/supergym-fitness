@@ -1,0 +1,140 @@
+.gym__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 120px 0 235px 60px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    padding: 100px 0 183px;
+  }
+
+  @include vp-767 {
+    padding: 64px 0 70px;
+  }
+}
+
+.gym__description {
+  max-width: 355px;
+  margin-top: 38px;
+
+  @include vp-1199 {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      margin: 0;
+      margin-right: 15px;
+      text-align: center;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 32px;
+      line-height: 38px;
+      text-align: left;
+    }
+  }
+
+  & h3 {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include vp-1199 {
+      margin-bottom: 34px;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      margin-bottom: 23px;
+      text-align: left;
+    }
+  }
+
+  & p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+
+      @include vp-1199 {
+        margin-bottom: 42px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 35px;
+      }
+    }
+
+    @include vp-1199 {
+      width: 74%;
+      margin: 0 auto;
+      text-align: center;
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    @include vp-767 {
+      width: 90%;
+      margin: 0;
+      text-align: left;
+    }
+  }
+}
+
+.gym__presentation-wrapper {
+  position: relative;
+}
+
+.gym__presentation-image {
+  height: 100%;
+  width: 100%;
+  height: 401px;
+  max-width: 660px;
+
+  @include vp-1199 {
+    max-width: 100%;
+    height: calc(100vw - 423px);
+    max-height: 600px;
+  }
+
+  @include vp-767 {
+    height: calc(100vw - 7px);
+    max-height: 500px;
+    margin-bottom: 40px;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+
+    @include vp-1199 {
+      object-fit: cover;
+      object-position: right;
+    }
+  }
+}

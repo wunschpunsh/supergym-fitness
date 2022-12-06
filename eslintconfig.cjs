@@ -55,8 +55,8 @@ module.exports = {
     'no-throw-literal': 'error', // eslint:recommended
     'no-with': 'error',
     'consistent-return': 'error',
-    curly: ['error', 'all'],
-    eqeqeq: 'error',
+    'curly': ['error', 'all'],
+    'eqeqeq': 'error',
     'no-alert': 'error',
     'no-eval': 'error',
     'no-fallthrough': 'error',
