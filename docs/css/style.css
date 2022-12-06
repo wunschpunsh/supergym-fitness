@@ -1051,7 +1051,7 @@ button,
   margin-bottom: 7px;
 }
 
-.gym__presentation-wrapper {
+.gym__presentation {
   position: relative;
 }
 
@@ -1165,6 +1165,63 @@ button,
 
 .video__play-button:active::before {
   background: #ed0233;
+}
+
+.membership {
+  background-color: #f8f9fc;
+}
+
+.membership__wrapper {
+  padding: 120px 0;
+}
+
+.tabs h2 {
+  margin: 0;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  text-align: center;
+}
+
+.tabs__button-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.tabs__button-item:not(:last-child) {
+  margin-right: 46px;
+}
+
+.tabs__button {
+  padding: 0;
+  font-size: 20px;
+  line-height: 30px;
+  border: none;
+  color: rgba(16, 38, 84, 0.5);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.tabs__button--active {
+  color: #102654;
+}
+
+.tabs__content-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* @mixin hover-focus {

@@ -75,7 +75,7 @@
                 Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
               </p>
             </div>
-            <div class="gym__presentation-wrapper">
+            <div class="gym__presentation">
               <div class="gym__presentation-image">
                 <picture>
                   <source media="(min-width: 320px)" srcset="./img/content/gym.webp, ./img/content/gym@2x.webp 2x"
@@ -85,8 +85,12 @@
                 </picture>
               </div>
               <div class="gym__presentation-video video">
-                <img src="./img/content/video-poster.jpg" width="364" height="228"
-                  alt="Заставка тренажерного зала для видео">
+                <picture>
+                  <source media="(min-width:320px)"
+                    srcset="./img/content/video-poster.webp , ./img/content/video-poster@2x.webp 2x">
+                  <img src="./img/content/video-poster.jpg" srcset="./img/content/video-poster@2x.jpg 2x" width="364"
+                    height="228" alt="Заставка тренажерного зала для видео">
+                </picture>
                 <div class="video__ovelay"></div>
                 <button class="video__play-button" type="button">
                   <span class="visually-hidden">Воспроизвести видео</span>
@@ -94,10 +98,57 @@
                     <use xlink:href="img/sprite.svg#play"></use>
                   </svg>
                 </button>
-                <div id="player"></div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="membership" id="membership">
+        <div class="container">
+          <div class="membership__wrapper tabs">
+            <h2>Абонементы</h2>
+            <ul class="tabs__button-list">
+              <li class="tabs__button-item">
+                <button class="tabs__button tabs__button--active" type="button">1 месяц</button>
+              </li>
+              <li class="tabs__button-item">
+                <button class="tabs__button" type="button">6 месяцев</button>
+              </li>
+              <li class="tabs__button-item">
+                <button class="tabs__button" type="button">12 месяцев</button>
+              </li>
+            </ul>
+            <ul class="tabs__content-list">
+              <li class="tabs__content-item price">
+                <h3>С тренером</h3>
+                <p>12 занятий</p>
+                <div class="price__wrapper">
+                  <p>5000</p>
+                  <span>₽</span>
+                </div>
+                <a href="#" class="tabs__content-button primary-button">купить абонемент</a>
+              </li>
+              <li class="tabs__content-item price">
+                <h3>Дневной</h3>
+                <p>с 8:00 до 17:00</p>
+                <div class="price__wrapper">
+                  <p>1700</p>
+                  <span>₽</span>
+                </div>
+                <a href="#" class="tabs__content-button primary-button">купить абонемент</a>
+              </li>
+              <li class="tabs__content-item price">
+                <h3>Полный день</h3>
+                <p>с 8:00 до 22:00</p>
+                <div class="price__wrapper">
+                  <p>2700</p>
+                  <span>₽</span>
+                </div>
+                <a href="#" class="tabs__content-button primary-button">купить абонемент</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
     <footer>

@@ -1,20 +1,8 @@
-/* global YT */
-
-// Load YouTube API
-
-let tag = document.createElement('script');
-tag.src = 'https://www.youtube.com/iframe_api';
-let firstScriptTag = document.getElementsByTagName('script')[0];
-
-const renderApi = () => {
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-};
-
 // Video
 
 const VIDEO_ID = '9TZXsZItgdw';
 
-// Custom button
+// // Custom button
 
 const playButton = document.querySelector('.video__play-button');
 
@@ -30,40 +18,22 @@ const createVideoPlaybackSetting = () => {
   playButton.style.display = 'none';
 };
 
-// Create IFRAME and Youtube Player
+// Youtube Player
 
-let player;
-window.onYouTubeIframeAPIReady = () => {
-  player = new YT.Player('player', {
-    height: '360',
-    width: '640',
-    videoId: VIDEO_ID,
-    playerVars: {
-      controls: 2,
-      modestbranding: 1,
-      origin: 'http://localhost:3000/',
-      rel: 0,
-    },
-    events: {
-      // onReady: onPlayerReady,
-      // 'onStateChange': onPlayerStateChange,
-    },
-  });
+const createIframe = (id, container) => {
+  const item = document.createElement('iframe');
+  item.setAttribute('title', 'YouTube video player');
+  item.setAttribute('allowfullscreen', '');
+  item.setAttribute('allow', 'autoplay');
+  item.setAttribute('frameborder', '0');
+  item.setAttribute(
+    'src',
+    `https://www.youtube.com/embed/${id}?autoplay=1&enablejsapi=0`
+  );
+  container.appendChild(item);
 };
 
 playButton.addEventListener('click', () => {
   createVideoPlaybackSetting();
-  player.playVideo();
+  createIframe(VIDEO_ID, videoContainer);
 });
-
-// const onPlayerReady = (event) => {
-//   event.target.playVideo();
-// };
-
-// const onPlayerError = (event) => {
-//   console.log(event.data);
-// };
-
-// console.log(player.getPlaylist());
-
-export {renderApi};

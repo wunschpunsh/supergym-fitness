@@ -1,31 +1,34 @@
 // Vendor
 // ---------------------------------
 
-@import "vendor/normalize";
+@import 'vendor/normalize';
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
 // Global
 // ---------------------------------
 
-@import "variables";
-@import "mixins";
-@import "global/fonts";
-@import "global/reboot";
-@import "global/utils";
-@import "global/container";
+@import 'variables';
+@import 'mixins';
+@import 'global/fonts';
+@import 'global/reboot';
+@import 'global/utils';
+@import 'global/container';
 
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
-@import "blocks/modal";
+@import 'blocks/btn';
+@import 'blocks/modal';
 
-@import "blocks/main-header.scss";
-@import "blocks/intro.scss";
-@import "blocks/primary-button.scss";
-@import "blocks/gym.scss";
-@import "blocks/video.scss";
+@import 'blocks/main-header.scss';
+@import 'blocks/intro.scss';
+@import 'blocks/primary-button.scss';
+@import 'blocks/gym.scss';
+@import 'blocks/video.scss';
+@import 'blocks/membership.scss';
+@import 'blocks/tabs.scss';
+@import 'blocks/price.scss';
 
 // ---------------------------------
 
