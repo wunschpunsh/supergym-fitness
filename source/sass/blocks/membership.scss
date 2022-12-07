@@ -1,7 +1,69 @@
 .membership {
+  position: relative;
   background-color: $color-ghost-white;
+
+  &::before {
+    // z-index: -1;
+    content: '';
+    position: absolute;
+    bottom: -9%;
+    right: 0;
+    width: 287px;
+    height: 336px;
+    // transform: rotate(0deg);
+    background-image: image-set(
+      url('../../img/background/weights-large.webp') 1x,
+      url('../../img/background/weights-large.png') 1x
+    );
+    background-repeat: no-repeat;
+    background-position: 0px -80px;
+
+    @media (min-width: $vp-1200) {
+      @include retina {
+        background-image: image-set(
+          url('../../img/background/weights-large@2x.webp') 2x,
+          url('../../img/background/weights-large@2x.png') 2x
+        );
+      }
+    }
+
+    @include vp-1199 {
+      bottom: -3%;
+      width: 348px;
+      height: 299px;
+      background-image: image-set(
+        url('../../img/background/weights-medium.webp') 1x,
+        url('../../img/background/weights-medium.png') 1x
+      );
+      background-position: 0 -74px;
+
+      @include retina {
+        background-image: image-set(
+          url('../../img/background/weights-medium@2x.webp') 2x,
+          url('../../img/background/weights-medium@2x.png') 2x
+        );
+      }
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
 
 .membership__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 120px 0;
+
+  @include vp-1199 {
+    padding: 100px 118px;
+  }
+
+  @include vp-767 {
+    padding: 63px 0 70px;
+  }
 }

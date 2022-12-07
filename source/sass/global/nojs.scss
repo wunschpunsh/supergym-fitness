@@ -1,0 +1,9 @@
+.nojs {
+  & .tabs__button-list {
+    display: none;
+  }
+
+  &.tabs h3 {
+    display: block;
+  }
+}

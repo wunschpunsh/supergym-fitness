@@ -1,14 +1,16 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-// import {renderApi} from './modules/youtube.js';
+import {deleteNoJs} from './modules/nojs';
+import {createTab} from './modules/tab.js';
 import './modules/player.js';
+import './modules/tab.js';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
-
+  deleteNoJs();
   iosVhFix();
 
   // Modules
@@ -18,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    // renderApi();
+    createTab();
   });
 });
 

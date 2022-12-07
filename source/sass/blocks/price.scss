@@ -1,0 +1,58 @@
+.price__wrapper {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+
+  @include vp-767 {
+    margin-bottom: 31px;
+  }
+
+  & p {
+    margin: 0;
+    margin-right: 14px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 90px;
+    color: $color-egyptian-blue;
+
+    @include vp-767 {
+      margin: 0;
+      margin-right: 10px;
+      font-size: 48px;
+      line-height: 72px;
+    }
+
+    &::after {
+      content: attr(data-price);
+      z-index: -1;
+      position: absolute;
+      bottom: 53px;
+      left: -20px;
+      width: auto;
+      height: 100%;
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 120px;
+      color: #e8e8e8;
+      opacity: 0.48;
+
+      @include vp-767 {
+        font-size: 80px;
+      }
+    }
+  }
+  & span {
+    display: block;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 90px;
+    color: $color-sapphire;
+
+    @include vp-767 {
+      font-size: 43px;
+      line-height: 72px;
+    }
+  }
+}

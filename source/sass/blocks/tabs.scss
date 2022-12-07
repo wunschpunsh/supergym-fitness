@@ -1,27 +1,71 @@
 .tabs {
   & h2 {
     margin: 0;
+    margin-bottom: 17px;
     font-family: $ff-alumni;
     font-weight: 600;
     font-size: 54px;
     line-height: 65px;
-    text-align: center;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      margin-right: 13px;
+      margin-bottom: 21px;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  & h3 {
+    display: none;
   }
 }
 
 .tabs__button-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
+  padding-bottom: 10px;
   list-style: none;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 }
 
 .tabs__button-item {
+  position: relative;
+
   &:not(:last-child) {
     margin-right: 46px;
+
+    @include vp-1199 {
+      margin-right: 55px;
+    }
+
+    @include vp-767 {
+      margin-right: 45px;
+    }
+  }
+
+  &--active {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+      width: 100%;
+      height: 2px;
+      background-color: $color-torch-red;
+    }
+    & .tabs__button {
+      color: $color-sapphire;
+    }
   }
 }
 
@@ -34,13 +78,131 @@
   background-color: transparent;
   cursor: pointer;
 
-  &--active {
-    color: $color-sapphire;
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 .tabs__content-list {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  width: 100%;
   margin: 0;
+  margin-top: 40px;
   padding: 0;
   list-style: none;
+
+  @include vp-1199 {
+    display: block;
+    margin-top: 45px;
+  }
+
+  @include vp-767 {
+    margin-top: 36px;
+  }
+}
+
+.tabs__content-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 360px;
+  padding: 54px 70px 62px;
+  background-color: $color-default-white;
+  border: 7px solid transparent;
+
+  @include vp-1199 {
+    justify-content: space-between;
+    height: calc(100vw - 320px);
+    max-width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include vp-767 {
+    height: calc(100vw);
+    min-height: 384px;
+    padding: 44px 35px 48px;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &:hover {
+    box-sizing: border-box;
+    border: 7px solid transparent;
+    border-image: $blue-red-border;
+    border-image-slice: 1;
+
+    .tabs__content-button {
+      border: 2px solid transparent;
+      border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+      border-image-slice: 1;
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+      color: $color-default-white;
+    }
+  }
+
+  & h4 {
+    margin: 0;
+    margin-bottom: 11px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 29px;
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+
+  & p {
+    margin: 0;
+    margin-bottom: 65px;
+    color: $color-chambray;
+
+    @include vp-767 {
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.tabs__content-button {
+  width: 206px;
+  // width: calc(100vw - 562px);
+  // max-width: 570px;
+  padding: 23px 40px;
+  border: 2px solid $color-sapphire;
+  color: $color-sapphire;
+
+  @include hover {
+    color: $color-default-white;
+    opacity: 0.9;
+  }
+
+  @include focus {
+    outline: none;
+    border: 2px solid $color-golden-yellow;
+  }
+
+  @include vp-1199 {
+    width: calc(100vw - 562px);
+    max-width: 570px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
