@@ -84,8 +84,9 @@
                     alt="Наш просторный и светлый зал.">
                 </picture>
               </div>
-              <div class="gym__presentation-video video">
-                <a class="video__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw">
+              <!-- Класс nojs для реализации при отключенном javascript -->
+              <div class="gym__presentation-video video nojs">
+                <a class="video__link" href="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1&enablejsapi=0">
                   <picture>
                     <source media="(min-width:320px)"
                       srcset="./img/content/video-poster.webp , ./img/content/video-poster@2x.webp 2x"
@@ -94,7 +95,7 @@
                       height="228" alt="Заставка тренажерного зала для видео.">
                   </picture>
                 </a>
-                <div class="video__ovelay"></div>
+                <div class="video__overlay"></div>
                 <button class="video__play-button" type="button">
                   <span class="visually-hidden">Воспроизвести видео.</span>
                   <svg width="17" height="17">

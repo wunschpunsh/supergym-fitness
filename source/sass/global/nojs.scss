@@ -53,4 +53,16 @@
       margin-bottom: 20px;
     }
   }
+
+  & .video__link {
+    cursor: pointer;
+  }
+
+  & .video__overlay {
+    pointer-events: none;
+  }
+
+  & .video__play-button {
+    display: none;
+  }
 }
