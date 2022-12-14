@@ -2664,6 +2664,7 @@ button,
   margin: 0;
   text-align: center;
   color: #ffffff;
+  word-break: break-all;
 }
 
 .advantage--center p:first-child {
@@ -2710,6 +2711,7 @@ button,
   font-size: 14px;
   line-height: 1;
   color: #2e35ac;
+  word-break: break-all;
 }
 
 .advantage__description-wrapper h3 {
@@ -2862,6 +2864,7 @@ button,
 
 .stock__item--unlim h3 {
   margin: 0;
+  margin-bottom: 10px;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -4361,6 +4364,10 @@ button,
   .advantage__value-wrapper {
     margin: 0;
     margin-bottom: 10px;
+  }
+
+  .advantage__value-wrapper p {
+    word-break: break-all;
   }
 
   .advantage__value-wrapper span {
