@@ -6,4 +6,51 @@
   &.tabs h3 {
     display: block;
   }
+
+  & .slider-button {
+    display: none;
+  }
+
+  & .slide__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    @include vp-1199 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  & .slide__item {
+    @include vp-767 {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &.coaches__wrapper {
+    h3 {
+      position: static;
+    }
+  }
+
+  & .slide__image-wrapper {
+    z-index: -1;
+  }
+
+  & .review__list {
+    display: block;
+  }
+
+  & .review__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
 }

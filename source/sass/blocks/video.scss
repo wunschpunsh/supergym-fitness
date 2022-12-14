@@ -2,8 +2,10 @@
   position: absolute;
   bottom: -115px;
   left: -63px;
-  width: 364px;
-  height: 228px;
+  width: 26.7vw;
+  height: 16.7vw;
+  max-width: 364px;
+  max-height: 228px;
 
   @include vp-1199 {
     width: 39.3%;
@@ -17,6 +19,7 @@
     width: 100%;
     height: calc(100vw - 153px);
     max-height: 265px;
+    max-width: 100%;
     left: 0;
     bottom: 0;
   }
@@ -28,18 +31,6 @@
     height: 100%;
     object-fit: cover;
   }
-
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   z-index: 4;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   pointer-events: none;
-  //   background-color: rgba(20, 54, 122, 0.5);
-  // }
 
   & iframe {
     position: absolute;
@@ -57,7 +48,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  // pointer-events: none;
   background-color: rgba(20, 54, 122, 0.5);
 }
 
@@ -73,6 +63,7 @@
   height: 100px;
   background: transparent;
   border: none;
+  cursor: pointer;
 
   @include vp-1199 {
     width: 73px;
@@ -93,7 +84,7 @@
   }
 
   &::after {
-    content: '';
+    content: " ";
     inset: 0;
     position: absolute;
     background: linear-gradient(
@@ -103,12 +94,12 @@
     );
     border-radius: 50%;
     border: 2px solid transparent;
-    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient($color-default-white 0 0) padding-box, linear-gradient($color-default-white 0 0);
     mask-composite: exclude;
   }
 
   &::before {
-    content: '';
+    content: " ";
     position: absolute;
     top: 0;
     left: 0;

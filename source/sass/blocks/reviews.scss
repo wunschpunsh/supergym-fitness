@@ -1,0 +1,67 @@
+.reviews {
+  & h2 {
+    margin: 0;
+    margin-left: 8px;
+    margin-bottom: 37px;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+    @include vp-1199 {
+      margin-left: 0;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 42px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.reviews__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 244px 120px;
+
+  @include vp-1199 {
+    padding: 0 0 101px;
+  }
+
+  @include vp-767 {
+    padding: 0 0 69px;
+  }
+}
+
+.reviews__swiper-button {
+  &--prev {
+    margin-right: 40px;
+
+    @include vp-767 {
+      margin-right: 22px;
+    }
+
+    &:disabled {
+      opacity: 0.2;
+    }
+  }
+
+  &--next {
+    margin-left: 40px;
+
+    @include vp-767 {
+      margin-left: 22px;
+    }
+
+    &:disabled {
+      opacity: 0.2;
+    }
+  }
+}

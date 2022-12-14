@@ -1,0 +1,38 @@
+.slider-button {
+  width: 16px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  & svg {
+    width: 16px;
+    height: 32px;
+    stroke: #afafaf;
+
+    @include vp-767 {
+      width: 10px;
+      height: 19px;
+    }
+  }
+
+  &:enabled:hover {
+    & svg {
+      stroke: $color-egyptian-blue;
+    }
+  }
+
+  @include focus {
+    outline: 2px solid $color-golden-yellow;
+  }
+
+  &:enabled:active {
+    opacity: 0.5;
+  }
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
+}

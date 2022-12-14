@@ -1,0 +1,60 @@
+.contacts {
+  border-top: 1px solid #74819c;
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 42px;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      margin-bottom: 37px;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  @media (min-width: $vp-1200) {
+    width: 50%;
+
+    & .container {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      padding-right: calc((100vw - 1160px) / 2);
+    }
+  }
+}
+
+.contacts__wrapper {
+  padding: 56px 56px 57px 120px;
+
+  @include vp-1199 {
+    padding: 62px 53px 60px 87px;
+  }
+
+  @include vp-767 {
+    padding: 64px 0 61px;
+  }
+}
+
+.contacts__info-wrapper {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}

@@ -1,0 +1,26 @@
+.feedback {
+  background-color: $color-sapphire;
+
+  @media (min-width: $vp-1200) {
+    width: 50%;
+
+    & .container {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      padding-left: calc((100vw - 1160px) / 2);
+    }
+  }
+}
+
+.feedback__wrapper {
+  padding: 70px 170px 70px 0;
+
+  @include vp-1199 {
+    padding: 62px 118px 70px 87px;
+  }
+
+  @include vp-767 {
+    padding: 64px 0 70px;
+  }
+}

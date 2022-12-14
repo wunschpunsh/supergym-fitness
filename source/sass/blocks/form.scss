@@ -1,0 +1,91 @@
+.form {
+  max-width: 410px;
+
+  @include vp-1199 {
+    max-width: 100%;
+  }
+
+  & h3 {
+    margin: 0;
+    margin-bottom: 33px;
+    font-family: $ff-alumni;
+    font-weight: 800;
+    font-size: 54px;
+    line-height: 1;
+    color: $color-default-white;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.form__input-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+}
+
+.form__input {
+  width: 46%;
+
+  @include vp-1199 {
+    width: 44%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 31px;
+    }
+  }
+
+  & input {
+    width: 100%;
+    padding: 6px 0;
+    font-family: $ff-roboto;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #74819c;
+    color: #93a9fb;
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+
+    @include hover {
+      opacity: 0.5;
+    }
+
+    @include focus {
+      outline: 1px solid $color-golden-yellow;
+    }
+  }
+}
+
+.form__send-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 16px;
+  border: 3px solid $color-default-white;
+
+  @include focus {
+    border: 3px solid $color-golden-yellow;
+  }
+}

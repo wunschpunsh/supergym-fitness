@@ -34,6 +34,20 @@
   }
 }
 
+@mixin show-hover-js {
+  @include vp-1199 {
+    &.is-open {
+      h3 {
+        position: static;
+      }
+
+      .slide__image-wrapper {
+        z-index: -1;
+      }
+    }
+  }
+}
+
 // Desktop first
 
 @mixin vp-1919 {
@@ -59,12 +73,6 @@
     @content;
   }
 }
-
-// @mixin vp-1023 {
-//   @media (max-width: ($vp-1024 - 1px)) {
-//     @content;
-//   }
-// }
 
 @mixin vp-767 {
   @media (max-width: ($vp-768 - 1px)) {

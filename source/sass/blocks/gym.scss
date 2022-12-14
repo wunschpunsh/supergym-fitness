@@ -14,15 +14,20 @@
 }
 
 .gym__description {
+  width: 26vw;
   max-width: 355px;
-  margin-top: 38px;
+  padding-top: 38px;
+  padding-bottom: 31px;
 
   @include vp-1199 {
+    width: 100%;
     max-width: 100%;
-    margin: 0;
+    padding: 0;
   }
 
   @include vp-767 {
+    max-width: 620px;
+    margin: 0 auto;
     padding: 0 15px;
   }
 
@@ -108,15 +113,21 @@
 
 .gym__presentation {
   position: relative;
+  max-height: 401px;
+
+  @include vp-1199 {
+    max-height: 100%;
+  }
 }
 
 .gym__presentation-image {
-  height: 100%;
-  width: 100%;
-  height: 401px;
+  height: 29.4vw;
+  width: 48.4vw;
+  max-height: 401px;
   max-width: 660px;
 
   @include vp-1199 {
+    width: 100%;
     max-width: 100%;
     height: calc(100vw - 423px);
     max-height: 600px;

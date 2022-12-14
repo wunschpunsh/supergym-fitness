@@ -1,36 +1,52 @@
 // Vendor
+
 // ---------------------------------
 
-@import 'vendor/normalize';
+@import "vendor/normalize";
 // Swiper 7.4.1
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
 
-@import 'variables';
-@import 'mixins';
-@import 'global/fonts';
-@import 'global/reboot';
-@import 'global/utils';
-@import 'global/container';
-@import 'global/nojs.scss';
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+@import "global/nojs.scss";
 
 // Blocks
 // ---------------------------------
 
-@import 'blocks/btn';
-@import 'blocks/modal';
-
-@import 'blocks/main-header.scss';
-@import 'blocks/intro.scss';
-@import 'blocks/primary-button.scss';
-@import 'blocks/gym.scss';
-@import 'blocks/video.scss';
-@import 'blocks/membership.scss';
-@import 'blocks/tabs.scss';
-@import 'blocks/price.scss';
-@import 'blocks/event.scss';
+@import "blocks/modal";
+@import "blocks/main-header.scss";
+@import "blocks/intro.scss";
+@import "blocks/primary-button.scss";
+@import "blocks/gym.scss";
+@import "blocks/video.scss";
+@import "blocks/membership.scss";
+@import "blocks/tabs.scss";
+@import "blocks/price.scss";
+@import "blocks/event.scss";
+@import "blocks/data.scss";
+@import "blocks/time.scss";
+@import "blocks/coaches.scss";
+@import "blocks/slide.scss";
+@import "blocks/advantages.scss";
+@import "blocks/advantage.scss";
+@import "blocks/stock.scss";
+@import "blocks/reviews.scss";
+@import "blocks/review.scss";
+@import "blocks/slider-button.scss";
+@import "blocks/contacts.scss";
+@import "blocks/feedback.scss";
+@import "blocks/form.scss";
+@import "blocks/info.scss";
+@import "blocks/main-footer.scss";
+@import "blocks/footer-nav.scss";
+@import "blocks/social.scss";
 
 // ---------------------------------
 

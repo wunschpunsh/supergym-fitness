@@ -9,13 +9,13 @@ const playButton = document.querySelector('.video__play-button');
 // Video playback settings
 
 const videoContainer = document.querySelector('.video');
-const poster = videoContainer.querySelector('img');
 const videoOvelay = videoContainer.querySelector('.video__ovelay');
+const videoLink = videoContainer.querySelector('.video__link');
 
 const createVideoPlaybackSetting = () => {
-  poster.style.display = 'none';
   videoOvelay.style.display = 'none';
   playButton.style.display = 'none';
+  videoLink.remove();
 };
 
 // Youtube Player
@@ -27,13 +27,17 @@ const createIframe = (id, container) => {
   item.setAttribute('allow', 'autoplay');
   item.setAttribute('frameborder', '0');
   item.setAttribute(
-    'src',
-    `https://www.youtube.com/embed/${id}?autoplay=1&enablejsapi=0`
+      'src',
+      `https://www.youtube.com/embed/${id}?autoplay=1&enablejsapi=0`
   );
   container.appendChild(item);
 };
 
-playButton.addEventListener('click', () => {
-  createVideoPlaybackSetting();
-  createIframe(VIDEO_ID, videoContainer);
-});
+const createPlayer = () => {
+  playButton.addEventListener('click', () => {
+    createVideoPlaybackSetting();
+    createIframe(VIDEO_ID, videoContainer);
+  });
+};
+
+export {createPlayer};

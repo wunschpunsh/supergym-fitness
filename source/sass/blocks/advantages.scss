@@ -1,0 +1,63 @@
+.advantages {
+  background-color: $color-ghost-white;
+}
+
+.advantages__wrapper {
+  padding: 146px 60px 91px;
+
+  @include vp-1199 {
+    padding: 92px 0;
+  }
+
+  @include vp-767 {
+    padding: 64px 0;
+  }
+
+  & h2 {
+    margin: 0;
+    margin-left: 10px;
+    margin-bottom: 55px;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+    @include vp-1199 {
+      margin: 0;
+      margin-right: 22px;
+      margin-bottom: 46px;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      margin-right: 17px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 32.7% 23.1% 32.7%;
+  column-gap: 60px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1199 {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    column-gap: 0;
+    row-gap: 47px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+  }
+}

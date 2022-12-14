@@ -1,4 +1,55 @@
 .tabs {
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    bottom: calc(0px - 71px);
+    right: -21%;
+    width: 385px;
+    height: 336px;
+
+    background-image: image-set(
+      url("../../img/background/weights-large.webp") 1x,
+      url("../../img/background/weights-large.png") 1x
+    );
+    background-repeat: no-repeat;
+    background-position: -43px -80px;
+
+    @media (min-width: $vp-1200) {
+      @include retina {
+        background-image: image-set(
+          url("../../img/background/weights-large@2x.webp") 2x,
+          url("../../img/background/weights-large@2x.png") 2x
+        );
+      }
+    }
+
+    @include vp-1199 {
+      bottom: calc(0px - 50px);
+      right: -12%;
+      width: 349px;
+      height: 299px;
+      background-image: image-set(
+        url("../../img/background/weights-medium.webp") 1x,
+        url("../../img/background/weights-medium.png") 1x
+      );
+      background-position: -37px -74px;
+
+
+      @include retina {
+        background-image: image-set(
+          url("../../img/background/weights-medium@2x.webp") 2x,
+          url("../../img/background/weights-medium@2x.png") 2x
+        );
+      }
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
   & h2 {
     margin: 0;
     margin-bottom: 17px;
@@ -33,13 +84,13 @@
   align-items: center;
   margin: 0;
   padding: 0;
-  padding-bottom: 10px;
   list-style: none;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 }
 
 .tabs__button-item {
   position: relative;
+  margin-bottom: 10px;
 
   &:not(:last-child) {
     margin-right: 46px;
@@ -55,14 +106,17 @@
 
   &--active {
     &::after {
-      content: '';
+      content: " ";
       position: absolute;
       left: 0;
+      right: 0;
+      margin: auto;
       bottom: -12px;
       width: 100%;
       height: 2px;
       background-color: $color-torch-red;
     }
+
     & .tabs__button {
       color: $color-sapphire;
     }
@@ -77,6 +131,19 @@
   color: rgba(16, 38, 84, 0.5);
   background-color: transparent;
   cursor: pointer;
+  user-select: none;
+
+  @include hover {
+    color: $color-egyptian-blue;
+  }
+
+  @include focus {
+    outline: 1px solid $color-golden-yellow;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   @include vp-1199 {
     font-size: 18px;
@@ -115,6 +182,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-self: center;
+  width: 26.4vw;
   max-width: 360px;
   padding: 54px 70px 62px;
   background-color: $color-default-white;
@@ -122,7 +191,8 @@
 
   @include vp-1199 {
     justify-content: space-between;
-    height: calc(100vw - 320px);
+    height: auto;
+    width: 100%;
     max-width: 100%;
 
     &:not(:last-child) {
@@ -131,7 +201,6 @@
   }
 
   @include vp-767 {
-    height: calc(100vw);
     min-height: 384px;
     padding: 44px 35px 48px;
 
@@ -140,7 +209,8 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     box-sizing: border-box;
     border: 7px solid transparent;
     border-image: $blue-red-border;
@@ -181,8 +251,6 @@
 
 .tabs__content-button {
   width: 206px;
-  // width: calc(100vw - 562px);
-  // max-width: 570px;
   padding: 23px 40px;
   border: 2px solid $color-sapphire;
   color: $color-sapphire;

@@ -1,0 +1,75 @@
+.coaches__wrapper {
+  position: relative;
+  padding: 50px 0 91px;
+
+  @include vp-1199 {
+    padding: 50px 56px 100px;
+  }
+
+  @include vp-767 {
+    padding: 28px 32px 70px;
+  }
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 47px;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      margin-bottom: 32px;
+      font-size: 42px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      margin-bottom: 42px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.coaches__swiper-button {
+  position: absolute;
+  top: calc(50% + 19px);
+  bottom: 0;
+
+  &--prev {
+    left: -57px;
+
+    @media (max-width: 1275px) {
+      left: -30px;
+    }
+
+    @include vp-1199 {
+      left: 0;
+      top: 50%;
+    }
+
+    @include vp-767 {
+      top: calc(50% + 10px);
+    }
+  }
+
+  &--next {
+    right: -57px;
+
+    @media (max-width: 1275px) {
+      right: -30px;
+    }
+
+    @include vp-1199 {
+      right: 0;
+      top: 50%;
+    }
+
+    @include vp-767 {
+      top: calc(50% + 10px);
+    }
+  }
+}

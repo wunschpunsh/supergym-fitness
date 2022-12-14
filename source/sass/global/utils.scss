@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -17,13 +17,13 @@
   }
 }
 
-// .rouble {
-//   font-family: $ff-rouble;
-//   /* stylelint-disable */
-//   text-transform: lowercase !important;
-//   font-weight: 400 !important;
-//   /* stylelint-enable */
-// }
+.along-container {
+  display: flex;
+
+  @include vp-1199 {
+    display: block;
+  }
+}
 
 .visually-hidden {
   position: absolute;
@@ -60,8 +60,3 @@
     display: none;
   }
 }
-
-// .no-transition {
-//   /* stylelint-disable-next-line */
-//   transition: none !important;
-// }

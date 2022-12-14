@@ -66,6 +66,7 @@
 .main-header__logo {
   width: 122px;
   height: 44px;
+
   @include vp-1199 {
     width: 82px;
     height: 17px;

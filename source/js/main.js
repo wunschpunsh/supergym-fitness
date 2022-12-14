@@ -1,26 +1,33 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
 import {deleteNoJs} from './modules/nojs';
 import {createTab} from './modules/tab.js';
-import './modules/player.js';
-import './modules/tab.js';
+import {createSliderCoaches} from './modules/slider.js';
+import {createPlayer} from './modules/player.js';
+import {chooseSlideByTouch} from './modules/touch-coach-slide.js';
+import {createCarouselReviews} from './modules/carousel';
+import {submitFeedBackForm} from './modules/form.js';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
-  deleteNoJs();
-  iosVhFix();
 
+  iosVhFix();
+  deleteNoJs();
+  createTab();
+  createSliderCoaches();
+  chooseSlideByTouch();
+  createCarouselReviews();
+  createPlayer();
+  submitFeedBackForm();
   // Modules
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
-    createTab();
+
   });
 });
 
