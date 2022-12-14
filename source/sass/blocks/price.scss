@@ -29,9 +29,9 @@
       content: attr(data-price);
       z-index: -1;
       position: absolute;
-      bottom: 53px;
+      bottom: 39px;
       left: -20px;
-      width: 100%;
+      width: 130%;
       min-width: 203px;
       height: 100%;
       font-weight: 700;
@@ -51,12 +51,14 @@
 
   & span {
     display: block;
+    margin: 0;
     font-weight: 700;
     font-size: 55px;
     line-height: 90px;
     color: $color-sapphire;
 
     @include vp-767 {
+      margin: 0;
       font-size: 43px;
       line-height: 72px;
     }

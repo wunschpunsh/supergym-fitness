@@ -10,8 +10,8 @@
     height: 336px;
 
     background-image: image-set(
-      url("../../img/background/weights-large.webp") 1x,
-      url("../../img/background/weights-large.png") 1x
+      url("../img/background/weights-large.webp") 1x,
+      url("../img/background/weights-large.png") 1x
     );
     background-repeat: no-repeat;
     background-position: -43px -80px;
@@ -19,8 +19,8 @@
     @media (min-width: $vp-1200) {
       @include retina {
         background-image: image-set(
-          url("../../img/background/weights-large@2x.webp") 2x,
-          url("../../img/background/weights-large@2x.png") 2x
+          url("../img/background/weights-large@2x.webp") 2x,
+          url("../img/background/weights-large@2x.png") 2x
         );
       }
     }
@@ -31,16 +31,16 @@
       width: 349px;
       height: 299px;
       background-image: image-set(
-        url("../../img/background/weights-medium.webp") 1x,
-        url("../../img/background/weights-medium.png") 1x
+        url("../img/background/weights-medium.webp") 1x,
+        url("../img/background/weights-medium.png") 1x
       );
       background-position: -37px -74px;
 
 
       @include retina {
         background-image: image-set(
-          url("../../img/background/weights-medium@2x.webp") 2x,
-          url("../../img/background/weights-medium@2x.png") 2x
+          url("../img/background/weights-medium@2x.webp") 2x,
+          url("../img/background/weights-medium@2x.png") 2x
         );
       }
     }
@@ -225,7 +225,7 @@
     }
   }
 
-  & h4 {
+  & p {
     margin: 0;
     margin-bottom: 11px;
     font-weight: 700;
@@ -238,7 +238,8 @@
     }
   }
 
-  & p {
+  & span {
+    display: block;
     margin: 0;
     margin-bottom: 65px;
     color: $color-chambray;

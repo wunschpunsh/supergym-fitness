@@ -142,6 +142,8 @@
   & img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: left;
 
     @include vp-1199 {
       object-fit: cover;

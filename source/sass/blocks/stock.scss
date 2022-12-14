@@ -34,9 +34,10 @@
   }
 }
 
-.stock__list {
+.stock__content-wrapper {
   display: grid;
-  grid-template-columns: 24.1% 24.1% 51.8%;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -48,6 +49,97 @@
 
   @include vp-767 {
     display: block;
+  }
+}
+
+.stock__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1199 {
+    flex-grow: 1;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+
+  &--promo {
+    align-items: start;
+
+    @include vp-1199 {
+      margin-bottom: 30px;
+    }
+  }
+
+  &--bonus {
+    flex-direction: column;
+
+    @include vp-1199 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    @include vp-767 {
+      display: block;
+    }
+
+    & .stock__item {
+      display: flex;
+      flex-direction: column;
+      min-height: 211px;
+      padding: 23px 35px 28px 27px;
+      border: 7px solid transparent;
+      border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+      border-image-slice: 1;
+
+      @include vp-1199 {
+        flex-basis: 47.7%;
+        margin: 0;
+      }
+
+      @include vp-767 {
+        align-items: center;
+        padding: 33px 35px 41px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+
+        @include vp-1199 {
+          margin-bottom: 0;
+        }
+
+        @include vp-767 {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+      }
+
+      & h3 {
+        margin-bottom: 12px;
+      }
+
+      & .stock__item-link {
+        align-self: start;
+        margin-top: auto;
+
+        @include vp-767 {
+          align-self: center;
+        }
+      }
+
+      & br {
+        display: none;
+
+        @include vp-1199 {
+          display: block;
+        }
+      }
+    }
   }
 }
 
@@ -87,7 +179,6 @@
     @include vp-1199 {
       width: 35.4vw;
       flex-basis: 41.3%;
-      margin-bottom: 30px;
       max-width: 100%;
     }
 
@@ -156,7 +247,6 @@
     @include vp-1199 {
       max-width: 100%;
       flex-grow: 1;
-      margin-bottom: 30px;
     }
 
     @include vp-767 {
@@ -173,63 +263,6 @@
       @include vp-1199 {
         object-position: top;
       }
-    }
-  }
-
-  &--free,
-  &--discount {
-    display: flex;
-    flex-direction: column;
-    min-height: 211px;
-    margin-left: 40px;
-    padding: 23px 35px 28px 27px;
-    border: 7px solid transparent;
-    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
-    border-image-slice: 1;
-
-    @include vp-1199 {
-      flex-basis: 47.7%;
-      margin: 0;
-    }
-
-    @include vp-767 {
-      align-items: center;
-      padding: 33px 35px 41px;
-    }
-
-    & h3 {
-      margin-bottom: 12px;
-    }
-
-    & .stock__item-link {
-      align-self: start;
-      margin-top: auto;
-
-      @include vp-767 {
-        align-self: center;
-      }
-    }
-  }
-
-  &--free {
-    margin-bottom: 40px;
-
-    & br {
-      display: none;
-
-      @include vp-1199 {
-        display: block;
-      }
-    }
-
-    @include vp-1199 {
-      margin: 0;
-      margin-right: 30px;
-    }
-
-    @include vp-767 {
-      margin: 0;
-      margin-bottom: 30px;
     }
   }
 }
