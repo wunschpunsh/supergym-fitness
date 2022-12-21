@@ -126,28 +126,58 @@
   max-height: 401px;
   max-width: 660px;
 
+  background-image: image-set(
+    url("../img/background/gym-large.webp") 1x,
+    url("../img/background/gym-large.jpg") 1x
+  );
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: $vp-1200) {
+    @include retina {
+      background-image: image-set(
+        url("../img/background/gym-large@2x.webp") 2x,
+        url("../img/background/gym-large@2x.jpg") 2x
+      );
+    }
+  }
+
   @include vp-1199 {
     width: 100%;
     max-width: 100%;
     height: calc(100vw - 423px);
     max-height: 600px;
+
+    background-image: image-set(
+      url("../img/background/gym-medium.webp") 1x,
+      url("../img/background/gym-medium.jpg") 1x
+    );
+
+    @include retina {
+      background-image: image-set(
+        url("../img/background/gym-medium@2x.webp") 2x,
+        url("../img/background/gym-medium@2x.jpg") 2x
+      );
+    }
   }
 
   @include vp-767 {
     height: calc(100vw - 7px);
     max-height: 500px;
     margin-bottom: 40px;
-  }
 
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: left;
+    background-image: image-set(
+      url("../img/background/gym-small.webp") 1x,
+      url("../img/background/gym-small.jpg") 1x
+    );
 
-    @include vp-1199 {
-      object-fit: cover;
-      object-position: right;
+    @include retina {
+      background-image: image-set(
+        url("../img/background/gym-small@2x.webp") 2x,
+        url("../img/background/gym-small@2x.jpg") 2x
+      );
     }
   }
 }

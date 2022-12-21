@@ -1,12 +1,12 @@
 .footer-nav {
-  flex-basis: 71%;
+  max-width: 700px;
 
   @include vp-1199 {
-    flex-basis: 79%;
+    max-width: 421px;
   }
 
   @include vp-767 {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
 
@@ -18,30 +18,16 @@
   list-style: none;
 
   @include vp-767 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: block;
+    column-count: 2;
     column-gap: 30px;
   }
 }
 
 .footer-nav__item {
   @include vp-767 {
-    width: 50%;
-
-    &--left {
-      grid-row: 2 / 3;
-    }
-
-    &--under {
-      grid-row: 3 / 4;
-    }
-  }
-
-  &:first-child {
-    flex-basis: 39.2%;
-
-    @include vp-1199 {
-      flex-basis: 21.4%;
+    &:first-child {
+      margin-top: 39px;
     }
   }
 

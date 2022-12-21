@@ -6,6 +6,7 @@
   height: 16.7vw;
   max-width: 364px;
   max-height: 228px;
+  overflow: hidden;
 
   @include vp-1199 {
     width: 39.3%;
@@ -28,8 +29,17 @@
     z-index: 2;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 117%;
     object-fit: cover;
+    object-position: -4px -30px;
+
+    @include vp-1199 {
+      object-position: -4px -22px;
+    }
+
+    @include vp-767 {
+      object-position: 0 -6px;
+    }
   }
 
   & iframe {
@@ -94,7 +104,8 @@
     );
     border-radius: 50%;
     border: 2px solid transparent;
-    mask: linear-gradient($color-default-white 0 0) padding-box, linear-gradient($color-default-white 0 0);
+    mask: linear-gradient($color-default-white 0 0) padding-box,
+      linear-gradient($color-default-white 0 0);
     mask-composite: exclude;
   }
 

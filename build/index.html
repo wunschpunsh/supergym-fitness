@@ -76,14 +76,7 @@
               </p>
             </div>
             <div class="gym__presentation">
-              <div class="gym__presentation-image">
-                <picture>
-                  <source media="(min-width: 320px)" srcset="./img/content/gym.webp, ./img/content/gym@2x.webp 2x"
-                    type="image/webp">
-                  <img src="./img/content/gym.jpg" srcset="./img/content/gym@2x.jpg 2x" width="660" height="401"
-                    alt="Наш просторный и светлый зал.">
-                </picture>
-              </div>
+              <div class="gym__presentation-image"></div>
               <!-- Класс nojs для реализации при отключенном javascript -->
               <div class="gym__presentation-video video nojs">
                 <a class="video__link" href="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1&enablejsapi=0">
@@ -542,7 +535,7 @@
             </button>
             <div class="reviews__swiper swiper swiper--carousel review">
               <div class="review__list swiper-wrapper">
-                <blockquote class="review__item swiper-slide" tabindex="0">
+                <blockquote class="review__item swiper-slide">
                   <picture>
                     <source media="(min-width: 320px)"
                       srcset="./img/content/photo-client.webp , ./img/content/photo-client@2x.webp 2x"
@@ -557,7 +550,7 @@
                       персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»</p>
                   </div>
                 </blockquote>
-                <blockquote class="review__item swiper-slide" tabindex="0">
+                <blockquote class="review__item swiper-slide">
                   <picture>
                     <source media="(min-width: 320px)"
                       srcset="./img/content/photo-client.webp , ./img/content/photo-client@2x.webp 2x"
@@ -572,7 +565,7 @@
                       персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»</p>
                   </div>
                 </blockquote>
-                <blockquote class="review__item swiper-slide" tabindex="0">
+                <blockquote class="review__item swiper-slide">
                   <picture>
                     <source media="(min-width: 320px)"
                       srcset="./img/content/photo-client.webp , ./img/content/photo-client@2x.webp 2x"
@@ -656,19 +649,17 @@
     <footer class="main-footer">
       <div class="container">
         <div class="main-footer__wrapper">
+          <a class="main-footer__logo-link">
+            <svg class="main-footer__logo" width="88" height="32" aria-label="Логотип фитнес центра Supergym.">
+              <use xlink:href="img/sprite.svg#footer-logo"></use>
+            </svg>
+          </a>
           <nav class="main-footer__nav footer-nav">
             <ul class="footer-nav__list">
               <li class="footer-nav__item">
-                <a class="main-footer__logo-link">
-                  <svg class="main-footer__logo" width="88" height="32" aria-label="Логотип фитнес центра Supergym.">
-                    <use xlink:href="img/sprite.svg#footer-logo"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-nav__item footer-nav__item--left">
                 <a href="#" class="footer-nav__link">Услуги</a>
               </li>
-              <li class="footer-nav__item footer-nav__item--under">
+              <li class="footer-nav__item">
                 <a href="#membership" class="footer-nav__link">Абонементы</a>
               </li>
               <li class="footer-nav__item">
